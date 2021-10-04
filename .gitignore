@@ -1,0 +1,9 @@
+/node_modules
+/logs
+/build
+/.idea
+.DS_Store
+.env*
+npm-debug.log*
+/coverage
+*.cache

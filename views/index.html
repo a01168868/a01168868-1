@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctica 1 | Desarrollo Web</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+
+    </head>
+    <body>
+        
+        <!--               MENU                    -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menuMTC">
+            <div class="container">
+                <img src="images/logo.png" alt="Logo Domótica" height="65">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/practica1"><span class="navText">Inicio</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/practica1#productos"><span class="navText">Productos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/practica1#divCuenta"><span class="navText">Crear Cuenta</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+
+        <!--                SLIDER                 -->
+        <div id="carouselExampleIndicators" class="carousel slide slideMTC" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active itemMTC">
+                    <img class="d-block w-100 imgCarousel" src="images/slider-iluminacion.jpeg" alt="Domótica Iluminación">
+                    <div class="carousel-caption d-none d-md-block captionMTC">
+                        <h1>Smart Bulb</h1>
+                        <h3>Cambia el ambiente de tu hogar desde la palma de tu mano</h3>
+                    </div>
+                </div>
+                <div class="carousel-item itemMTC">
+                    <img class="d-block w-100 imgCarousel" src="images/slider-iluminacion2.jpeg" alt="Smart Light APP">
+                    <div class="carousel-caption d-none d-md-block captionMTC">
+                        <h1>Smart Light APP</h1>
+                        <h3>Sin necesidad de instalaciones complicadas</h3>
+                    </div>
+                </div>
+                <div class="carousel-item itemMTC">
+                    <img class="d-block w-100 imgCarousel" src="images/slider-camaras.jpeg" alt="Cámaras Inteligentes">
+                    <div class="carousel-caption d-none d-md-block captionMTC">
+                        <h1>Security IP Camera</h1>
+                        <h3>Detección de movimiento, identificación de rostro en cualquier lugar del mundo</h3>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+
+
+
+
+          <!--              INFO          -->
+        <div class="container" id="productos">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 gridMTC">
+                    <img src="images/bulb.jpeg" alt="Bulb" class="img-info">
+                    <br><br>
+                    <button onclick="muestraFocos()" class="btn btn-primary btn-block">Ver Iluminación<br><i>Click</i></button>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 gridMTC">
+                    <img src="images/camera.jpg" alt="Bulb" class="img-info">
+                    <br><br>
+                    <button ondblclick="muestraCamaras()" class="btn btn-success btn-block">Ver Cámaras<br><i>Doble Click</i></button>
+                </div>
+            </div>
+        </div>
+
+
+
+       
+        
+        <!--               TABLA 1         -->
+        <div class="container container-tabla">
+            <br><br>
+            <h3 class="titulo-tabla" id="tituloTabla">Iluminación</h3>
+            <div class="table-responsive tabla-iluminacion" id="tablaIluminacion">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2343</td>
+                            <td>Foco Smart L23</td>
+                            <td>Este es un foco inteligente que se comunica por medio de su propia APP y WIFI</td>
+                            <td>$175.00</td>
+                        </tr>
+                        <tr>
+                            <td>23233</td>
+                            <td>Tira de LED </td>
+                            <td>Tira de LED RGB de 10 metros con dispositivo de control WIFI</td>
+                            <td>$321.00</td>
+                        </tr>
+                        <tr>
+                            <td>12543</td>
+                            <td>Control de iluminación</td>
+                            <td>Controla hasta 15 sistemas de iluminación por RF.</td>
+                            <td>$231.00</td>
+                        </tr>
+                        <tr>
+                            <td>64334</td>
+                            <td>Smart Bulb</td>
+                            <td>Foco con comunicación WIFI y sistema manual ON/OFF</td>
+                            <td>$632.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="table-responsive tabla-seguridad" id="tablaSeguridad">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7654</td>
+                            <td>Cámara de seguridad por WIFI</td>
+                            <td>Cámara de 14MP con rango de comunicación de 10 metros, incluye suscripción mensual en su APP</td>
+                            <td>$820.00</td>
+                        </tr>
+                        <tr>
+                            <td>98056</td>
+                            <td>Hub para 10 cámaras </td>
+                            <td>Hub para interconectar hasta 10 cámaras y enviar imágenes a un centro de monitoreo.</td>
+                            <td>$355.00</td>
+                        </tr>
+                        <tr>
+                            <td>5436</td>
+                            <td>Cámara WIFI con visión nocturna</td>
+                            <td>Cámara de 12MP con sistema nocturno y detección de movimiento</td>
+                            <td>$1,394.00</td>
+                        </tr>
+                        <tr>
+                            <td>66654</td>
+                            <td>Cámara con lector de temperatura</td>
+                            <td>Cámara con detección de temperatura alta en usuarios y alarma sonora tipo "bip" en caso de temperatura mayor a 38 grados centígrados.</td>
+                            <td>$3,250.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <form method="GET" action="/escuchaForm" enctype="multipart/form-data" name="formUsuario" id="formUsuario"> 
+            <div class="container" id="divCuenta">
+                <h3>Crea una nueva cuenta</h3>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre Completo:</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Fulanito del Monte">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo" class="form-label">Correo:</label>
+                            <input type="email" class="form-control" name="correo" id="correo" placeholder="fulanito@suempresa.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="********">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password2" class="form-label">Repite tu Contraseña:</label>
+                            <input type="password" class="form-control" name="password2" id="password2" placeholder="********">
+                        </div>
+                        <p><i>*Su contraseña debe tener al menos 6 caracteres.</i></p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="telefono" class="form-label">Teléfono:</label>
+                            <input type="text" class="form-control" name="telefono" id="telefono" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fecha" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="carrera" class="form-label">Carrera</label>
+                            <input type="text" class="form-control" name="carrera" id="carrera" placeholder="ISDR">
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="boletin" name="boletin" checked>
+                            <label class="form-check-label" for="boletin">
+                              Suscribirme al boletín de noticias
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <button class="btn btn-warning d-inline colorBlanco" type="reset">Limpiar Datos</button>
+                    <button class="btn btn-success d-inline" type="button" onclick="enviaForm()" id="botonCrea">Crear Cuenta</button>
+                </center>
+            </div>
+        </form>
+        
+
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-dark text-muted border-top">
+            <section>
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <img src="images/logo.png" alt="Logo" class="logo-footer">
+                            <p>
+                                Esta es la primera práctica para la clase de Desarrollo de Aplicaciones Web en el Instituto Tecnológico y de 
+                                Estudios Superiores de Monterrey, Campus Estado de México
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Productos</h6>
+                            <p><a href="/practica1#productos" class="text-reset">Lista de Productos</a></p>
+                            <p><a href="/practica1#divCuenta" class="text-reset">Crear Cuenta</a></p>
+                            <p><a href="/practica1" class="text-reset">Inicio</a></p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                            <p><i class="fas fa-home me-3"></i> México, México, MX</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                a01168868@itesm.mx
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Miguel Jesús Torres Cárdenas |
+                Desarrollo de Aplicaciones Web | ITESM CEM
+            </div>
+        </footer>
+        <!-- Footer -->
+
+
+
+       
+
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/funciones.js"></script>
+
+    </body>
+</html>
+

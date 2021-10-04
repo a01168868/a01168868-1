@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creando Cuenta | Desarrollo Web</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+
+    </head>
+    <body>
+
+         <!--               MENU                    -->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark menuMTC">
+            <div class="container">
+                <img src="images/logo.png" alt="Logo Domótica" height="65">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/practica1"><span class="navText">Inicio</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/practica1#productos"><span class="navText">Productos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/practica1#divCuenta"><span class="navText">Crear Cuenta</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <div class="container">
+            <h3 id="tituloEscuchaForm">Datos de Usuario</h3>
+            <div class="row" id="divDatosUsuario">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label class="form-label"><b>Nombre Completo:</b></label>
+                        <%=usuario.nombre%>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><b>Correo:</b></label>
+                        <%=usuario.correo%>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><b>Contraseña:</b></label>
+                        <span id="contraVisible"><%=usuario.contraseña%></span>
+                        <span id="contraOculta">**********</span>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="muestraContrasena()">Mostrar/Ocultar Contraseña <i class="fas fa-eye"></i></button>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label class="form-label"><b>Teléfono:</b></label>
+                        <%=usuario.telefono%>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><b>Fecha de Nacimiento:</b></label>
+                        <%=usuario.fecha%>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><b>Carrera:</b></label>
+                        <%=usuario.carrera%>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><b>Recibir noticias:</b></label>
+                        <% if(usuario.boletin==1){ %>
+                            <i class="fas fa-check"></i>
+                        <% } %>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <a href="/practica1">Ir al inicio...</a>
+        </div>
+
+
+
+
+       
+
+
+         <!-- Footer -->
+         <footer class="text-center text-lg-start bg-dark text-muted border-top fixed-bottom">
+            <section>
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <img src="images/logo.png" alt="Logo" class="logo-footer">
+                            <p>
+                                Esta es la primera práctica para la clase de Desarrollo de Aplicaciones Web en el Instituto Tecnológico y de 
+                                Estudios Superiores de Monterrey, Campus Estado de México
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Productos</h6>
+                            <p><a href="/practica1#productos" class="text-reset">Lista de Productos</a></p>
+                            <p><a href="/practica1#divCuenta" class="text-reset">Crear Cuenta</a></p>
+                            <p><a href="/practica1" class="text-reset">Inicio</a></p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                            <p><i class="fas fa-home me-3"></i> México, México, MX</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                a01168868@itesm.mx
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Miguel Jesús Torres Cárdenas |
+                Desarrollo de Aplicaciones Web | ITESM CEM
+            </div>
+        </footer>
+        <!-- Footer -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/funciones.js"></script>
+
+    </body>
+</html>
