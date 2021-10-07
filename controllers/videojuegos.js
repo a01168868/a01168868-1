@@ -1,6 +1,3 @@
-// Indicar dónde están los recursos
-require('dotenv').config;
-const path = require("path");
 const Videojuego = require('../utils/database').models.videojuego;
 
 exports.getAgregarVideojuego = (req,res)=>{

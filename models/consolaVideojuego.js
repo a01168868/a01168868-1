@@ -1,4 +1,3 @@
-//Tabla intermedia
 const Sequelize = require('sequelize');
 const Videojuego = (sequelize)=>{
     sequelize.define('consolaVideojuego',{
