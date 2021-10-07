@@ -1,12 +1,14 @@
 const Sequelize = require('sequelize');
-const Videojuego = (sequelize)=>{
+const ConsolaVideojuego = (sequelize)=>{
     sequelize.define('consolaVideojuego',{
         idCV:{
-            type: Sequelize.INTEGER, //Varchar(30)
+            type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true 
         },
-        lanzamiento: Sequelize.STRING
+        lanzamiento: Sequelize.STRING,
+        videojuegoId: Sequelize.INTEGER,
+        consolaId: Sequelize.INTEGER
     })
 }
-module.exports= Videojuego
+module.exports= ConsolaVideojuego

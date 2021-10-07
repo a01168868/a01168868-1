@@ -9,8 +9,8 @@ exports.Create = (req, res) => {
             console.log("Nueva Consola", resultado);
             res.json({ estado: "Aceptado", entity: resultado });
         })
-        .catch(error => {
-            console.log("Hubo un error" + error);
+        .catch(err => {
+            console.log("Error",err);
             res.json({ estado: "Error" });
         })
 };
@@ -24,7 +24,7 @@ exports.Get = (req, res) => {
             res.json(consola);
         })
         .catch(err => {
-            console.log("Error" + err);
+            console.log("Error",err);
             res.json({ error: err });
         });
     
@@ -44,7 +44,7 @@ exports.GetOne = (req, res) => {
                 res.json(consola);
             })
             .catch(err => {
-                console.log("Error" + err);
+                console.log("Error",err);
                 res.json({ error: err });
             });
     }
@@ -58,8 +58,8 @@ exports.Update = (req, res) => {
     Consola.update(req.body, {
       where: { id: id }
     })
-      .then(num => {
-        if (num == 1) {
+      .then(consres => {
+        if (consres == 1) {
           res.send({
             message: "Consola was updated successfully."
           });
@@ -70,6 +70,7 @@ exports.Update = (req, res) => {
         }
       })
       .catch(err => {
+        console.log("Error",err);
         res.status(500).send({
           message: "Error updating Consola with id=" + id
         });
@@ -83,8 +84,8 @@ exports.Delete = (req, res) => {
     Consola.destroy({
       where: { id: id }
     })
-      .then(num => {
-        if (num == 1) {
+      .then(consres => {
+        if (consres == 1) {
           res.send({
             message: "Consola was deleted successfully!"
           });
@@ -95,6 +96,7 @@ exports.Delete = (req, res) => {
         }
       })
       .catch(err => {
+        console.log("Error",err);
         res.status(500).send({
           message: "Could not delete Consola with id=" + id
         });

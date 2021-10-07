@@ -1,4 +1,5 @@
 function aplicarRelaciones(sequelize){
+    console.log(sequelize.models)
     const Videojuego = sequelize.models.videojuego
     const Consola = sequelize.models.consola
     const ConsolaVideojuego = sequelize.models.consolaVideojuego
