@@ -19,8 +19,8 @@ app.engine('html', require('ejs').renderFile);
 
 sequelize.sync()
     .then(
-        app.listen(8080, () => {
-            console.log("Servidor online en el puerto 8080")
+        app.listen(8081, () => {
+            console.log("Servidor online en el puerto 8081")
         })
     )
     .catch(err => console.log(err))
